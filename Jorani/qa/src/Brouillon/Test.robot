@@ -4,6 +4,7 @@ Documentation                       Suite description
 Library                             Selenium2Library
 Library                             lib.py
 
+
 *** Variables ***
 
 ${SERVER}                           https://demo.jorani.org/session/login

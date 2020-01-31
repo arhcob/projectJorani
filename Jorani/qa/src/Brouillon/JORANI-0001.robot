@@ -19,17 +19,17 @@ ${LOGIN_PATH}                       xpath=.//*[@id="login"]
 ${PASSWORD_PATH}                    xpath=.//*[@id="password"]
 *** Keywords ***
 Open Browser To Login Page
-    Open browser                    ${SERVER}               ${BROWSER}
+    Open browser                    ${SERVER}              ${BROWSER}
     maximize browser window
     set selenium speed              ${DELAY}
 Set Login
-    set test variable               ${LOGIN}    HELLO
+    set test variable               ${LOGIN}               '#admin
     clear element text              ${LOGIN_PATH}
-    input text                       ${LOGIN_PATH}   ${LOGIN}
+    input text                      ${LOGIN_PATH}           ${LOGIN}
 Set Password
-    set test variable               ${PASSWORD}    HELLO
+    set test variable               ${PASSWORD}             Hello00
     clear element text              ${PASSWORD_PATH}
-     input text                     ${PASSWORD_PATH}  ${PASSWORD}
+    input text                      ${PASSWORD_PATH}        ${PASSWORD}
 Click on Login Button
     click button                    ${Login}
     capture page screenshot
@@ -72,5 +72,5 @@ Login Pages
     Open Browser To Login Page
     Click on Login Button
 
-    [Teardown]                      close browser
+    [Teardown]                        close browser
 
