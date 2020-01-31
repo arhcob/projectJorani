@@ -10,13 +10,6 @@ ${PwdInput}                     xpath=.//*[@id="password"]
 ${LoginBtn}                     xpath=.//button[@id="send"]
 ${DELAY}                        3
 
-*** Test Cases ***
-Connect To Jorani Application
-    Open Jorani Application
-    Set Login
-    Set Password
-    Click on Login Button
-
 *** Keywords ***
 Open Jorani Application
     open browser                 ${URL}                      ${BROWSER}
@@ -30,3 +23,13 @@ Set Password
 Click on Login Button
     click button                 ${LoginBtn}
     capture page screenshot
+
+Connect To Jorani Application With Default User
+    Open Jorani Application
+    Click on Login Button
+
+Connect To Jorani Application With Default User
+    Open Jorani Application
+    Set Login
+    Set Password
+    Click on Login Button
