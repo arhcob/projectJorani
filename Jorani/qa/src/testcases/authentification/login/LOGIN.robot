@@ -28,7 +28,7 @@ Connect To Jorani Application With Default User
     Open Jorani Application
     Click on Login Button
 
-Connect To Jorani Application With Default User
+Connect To Jorani Application With Admin User
     Open Jorani Application
     Set Login
     Set Password
