@@ -1,14 +1,15 @@
 *** Settings ***
-Documentation                   Suite description
-Library                         Selenium2Library
+Documentation                    Suite description
+Library                          Selenium2Library
 
 *** Variables ***
-${BROWSER}                      chrome
-${URL}                          https://demo.jorani.org/session/login
-${LoginInput}                   xpath=.//*[@id="login"]
-${PwdInput}                     xpath=.//*[@id="password"]
-${LoginBtn}                     xpath=.//button[@id="send"]
-${DELAY}                        3
+${BROWSER}                       chrome
+${URL}                           https://demo.jorani.org/session/login
+${LoginInput}                    xpath=.//*[@id="login"]
+${PwdInput}                      xpath=.//*[@id="password"]
+${LoginBtn}                      xpath=.//button[@id="send"]
+${DELAY}                         3
+${NewPassword}                   Hello20
 
 *** Keywords ***
 Open Jorani Application
@@ -23,7 +24,8 @@ Set Password
 Click on Login Button
     click button                 ${LoginBtn}
     capture page screenshot
-
+Change Password
+    input text                   ${PwdInput}                 ${NewPassword}
 Connect To Jorani Application With Default User
     Open Jorani Application
     Click on Login Button
