@@ -22,7 +22,6 @@ Open Create User Page
     click element                   ${Create_User}
     capture page screenshot
 Open List of types Page
-    click element                   ${Admin_List}
     click element                   ${List_of_types}
     capture page screenshot
 Open Diagnostic Page
