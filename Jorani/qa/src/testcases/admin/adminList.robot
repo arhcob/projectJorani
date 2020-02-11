@@ -25,7 +25,6 @@ Open List of types Page
     click element                   ${List_of_types}
     capture page screenshot
 Open Diagnostic Page
-    click element                   ${Admin_List}
     click element                   ${Diagnostic}
     capture page screenshot
 
