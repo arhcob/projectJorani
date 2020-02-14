@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation                                   [Admin][ListofUsers] Reset password for user
 Library                                         Selenium2Library
-Resource                                        src/testcases/authentification/login/LOGIN.robot
-Resource                                        src/testcases/admin/adminList.robot
+Resource                                        src/main/python/demo/Jorani/functions/loginFunc.robot
+Resource                                        src/main/python/demo/Jorani/functions/adminFunc.robot
 
 *** Variables ***
 ${ResetIcon}                                    xpath=.//a[@href='https://demo.jorani.org/users/reset/${ID}']
@@ -33,4 +33,5 @@ Reset password for user
     Reset password
     Confirm Reset Password
     Assert that Password has been succesfully changed
-    close all browsers
+
+[Teardown]          close all browsers

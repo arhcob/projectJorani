@@ -1,10 +1,8 @@
 *** Settings ***
 Documentation                                   [Admin][ListofTypes] Export list of types
 Library                                         Selenium2Library
-
-Resource                                        src/testcases/authentification/login/LOGIN.robot
-Resource                                        src/testcases/admin/adminList.robot
-Resource                                        src/main/python/demo/Jorani/functions/admin/Admin.robot
+Resource                                        src/main/python/demo/Jorani/functions/loginFunc.robot
+Resource                                        src/main/python/demo/Jorani/functions/adminFunc.robot
 
 *** Test Cases ***
 Export types list
@@ -12,3 +10,5 @@ Export types list
     Open Admin List
     Open List of types Page
     Click on Export this list button
+
+    [Teardown]          close all browsers

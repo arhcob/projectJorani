@@ -2,7 +2,6 @@
 Resource                                demo/function/FuncPart.robot
 
 *** Test Cases ***
-
 Delete Actual User
     Open Jorani Application
     Click on Login Button

@@ -1,10 +1,12 @@
 *** Settings ***
 Documentation                    Suite List of users
 Library                          Selenium2Library
-Resource                         src/testcases/authentification/login/LOGIN.robot
-Resource                         src/testcases/admin/adminList.robot
+Resource                         src/main/python/demo/Jorani/functions/loginFunc.robot
+Resource                         src/main/python/demo/Jorani/functions/adminFunc.robot
 
 *** Test Cases ***
 Connect To Jorani Application
     Connect To Jorani Application With Admin User
+    Open Admin List
     Open Diagnostic Page
+    [Teardown]          close all browsers

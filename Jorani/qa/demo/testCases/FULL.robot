@@ -12,12 +12,12 @@ ${List_Of_Users}                                xpath=.//a[contains(text(),'List
 
 ${lastPageBtn}                                  xpath=.//div[@id='users_paginate']//a[last()][not(@id)]
 ${DeleteBtn}                                    xpath=.//tbody/tr[last()]//a[@class='confirm-delete']
-#${DeleteBtn}                                    xpath=.//a[@class='confirm-delete' and @data-id='${ID}']
+#${DeleteBtn}                                    xpath=.//a[@class='confirm-delete' and @data-id='128']
 #${ID}                                           128
 ${PopupDelete}                                  xpath=.//div[@id='frmConfirmDelete']/div[@class='modal-body']
 ${AlertDelete}                                  delete one user
 ${ConfirmDeleteBtn}                             xpath=.//a[contains(@id,'lnkDelete')]
-${Flashbox}                                     xpath=//*[@id="flashbox"]
+${Flashbox}                                     xpath=.//*[@id="flashbox"]
 ${AlertDeleted}                                 deleted
 
 *** Keywords ***
@@ -44,6 +44,7 @@ Assert that user has been succesfully deleted
     capture page screenshot
     element should contain                      ${Flashbox}                 ${AlertDeleted}
 
+
 *** Test Cases ***
 Delete Actual User
     Open Jorani Application
@@ -54,3 +55,5 @@ Delete Actual User
     Delete User
     Confirm Delete User
     Assert that user has been succesfully deleted
+#TC 2
+#    open browser    https://www.google.com/         chrome

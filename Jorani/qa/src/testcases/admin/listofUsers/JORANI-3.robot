@@ -1,35 +1,19 @@
 *** Settings ***
 Documentation                                   [Admin][ListofUsers] Delete User
 Library                                         Selenium2Library
-Resource                                        src/testcases/authentification/login/LOGIN.robot
-Resource                                        src/testcases/admin/adminList.robot
-
-*** Variables ***
-${DeleteBtn}                                    xpath=.//a[@class='confirm-delete' and @data-id='${ID}']
-${ID}                                           126
-${PopupDelete}                                  xpath=.//div[@id='frmConfirmDelete']/div[@class='modal-body']
-${AlertDelete}                                  delete one user
-${ConfirmDeleteBtn}                             xpath=.//a[@href='https://demo.jorani.org/users/delete/${ID}']
-${Flashbox}                                     xpath=//*[@id="flashbox"]
-${AlertDeleted}                                 deleted
-*** Keywords ***
-Delete User
-    click element                               ${DeleteBtn}
-    set selenium speed                          4
-Confirm Delete User
-    element should contain                     ${PopupDelete}      ${AlertDelete}
-    click element                              ${ConfirmDeleteBtn}
-Assert that user has been succesfully deleted
-    capture page screenshot
-    element should contain                     ${Flashbox}       ${AlertDeleted}
+Resource                                        src/main/python/demo/Jorani/functions/loginFunc.robot
+Resource                                        src/main/python/demo/Jorani/functions/adminFunc.robot
 
 *** Test Cases ***
 
 Delete Actual User
-    Connect To Jorani Application With Default User
+    Open Jorani Application
+    Click on Login Button
     Open Admin List
     Open List of Users Page
+    Click on last paginate button
     Delete User
-    Confirm Delete User
-    Assert that user has been succesfully deleted
-    close all browsers
+    Confirm Delete Field
+    Assert that Field has been succesfully deleted
+
+    [Teardown]                  CLOSE ALL BROWSERS
