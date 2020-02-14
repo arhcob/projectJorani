@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation                                   [Admin][ListofUsers] Create a new user from List of users page
 Library                                         Selenium2Library
-Resource                                        src/testcases/authentification/login/LOGIN.robot
-Resource                                        src/testcases/admin/adminList.robot
+Resource                                        src/main/python/demo/Jorani/functions/loginFunc.robot
+Resource                                        src/main/python/demo/Jorani/functions/adminFunc.robot
 
 *** Variables ***
 ${CreateNewUserBtn}                             xpath=.//div/a[@href='https://demo.jorani.org/users/create']
@@ -19,5 +19,6 @@ Create a new user from List of users page
     Open List of Users Page
     Click on Create a new user button
 
+    [Teardown]          close all browsers
     # TODO Call Create User Package
     # FIXME
