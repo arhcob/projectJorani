@@ -1,9 +1,8 @@
 *** Settings ***
 Documentation                                   [Admin][ListofTypes] Create a new type
 Library                                         Selenium2Library
-Resource                                        src/testcases/authentification/login/LOGIN.robot
-Resource                                        src/testcases/admin/adminList.robot
-Resource                                        src/main/python/demo/Jorani/functions/admin/Admin.robot
+Resource                                        src/main/python/demo/Jorani/functions/loginFunc.robot
+Resource                                        src/main/python/demo/Jorani/functions/adminFunc.robot
 
 
 *** Test Cases ***
