@@ -14,6 +14,6 @@ Delete Actual User
     Click on last paginate button
     Delete User
     Confirm Delete Field
-    Assert that Field has been succesfully deleted
+    Assert that Field has been successfully deleted
 
     [Teardown]                  CLOSE ALL BROWSERS

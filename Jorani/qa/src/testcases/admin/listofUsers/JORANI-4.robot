@@ -21,7 +21,7 @@ Confirm Reset Password
     element should contain                      ${PopupResetPwd}      ${AlertResetPwd}
     Change Password
     click button                                ${ResetBtn}
-Assert that Password has been succesfully changed
+Assert that Password has been successfully changed
     capture page screenshot
     element should contain                      ${Flashbox}           ${AlertPwdChanged}
 
@@ -32,6 +32,6 @@ Reset password for user
     Open List of Users Page
     Reset password
     Confirm Reset Password
-    Assert that Password has been succesfully changed
+    Assert that Password has been successfully changed
 
 [Teardown]          close all browsers
