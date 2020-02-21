@@ -35,7 +35,7 @@ Confirm Delete Field
     element should contain                              ${PopupDelete}              ${AlertDelete}
     click element                                       ${ConfirmDeleteBtn}
 
-Assert that Field has been succesfully deleted
+Assert that Field has been successfully deleted
     capture page screenshot
     element should contain                              ${Flashbox}                 ${AlertDeleted}
 

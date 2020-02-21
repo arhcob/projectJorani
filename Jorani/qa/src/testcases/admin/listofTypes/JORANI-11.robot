@@ -11,6 +11,6 @@ Delete Actual Type
     Open List of types Page
     Delete Type
     Confirm Delete Field
-    Assert that Field has been succesfully deleted
+    Assert that Field has been successfully deleted
 
     [Teardown]      CLOSE ALL BROWSERS

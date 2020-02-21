@@ -16,7 +16,7 @@ ${Admin_list}                       xpath=.//a[contains(text(),'Admin')]
 ${Create_User}                      xpath=.//a[contains(text(),'Create user')]
 ${Firstname}                        xpath=.//input[@id='firstname']
 ${Lastname}                         xpath=.//input[@id='lastname']
-${Login}                            xpath=.//input[@id='login']
+${Login}                            id=login
 ${E-mail}                           xpath=.//input[@id='email']
 ${Manager_Self}                     xpath=.//input/a[@id='cmdSelfManager']
 ${Manager_Select}                   xpath=.//input/a[@id='cmdSelectManager']
@@ -37,7 +37,7 @@ ${Cancel}                           xpath=.//a[@href='https://demo.jorani.org/us
 *** Keywords ***
 Open Browser To Login Page
     Open browser                    ${SERVER}               ${BROWSER}
-    maximize browser window
+    #maximize browser window
     set selenium speed              ${DELAY}
 Click on Login Button
     click button                    ${Login}
@@ -46,7 +46,7 @@ Open Admin List
     click element                   ${Admin_list}
     set selenium speed              ${DELAY2}
 Open Create User Page
-    click element                   ${Create_User}
+    click link                      ${Create_User}
     set selenium speed              ${DELAY3}
 #Create a New User
 

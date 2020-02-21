@@ -15,7 +15,7 @@ Activate User
     click element                               ${ActiveBtn}
 Deactivate User
     click element                               ${DeactiveBtn}
-Assert That user has been succesfully updated
+Assert That user has been successfully updated
      element should contain                     ${Flashbox}       ${AlertUpdated}
 
 *** Test Cases ***
@@ -25,7 +25,7 @@ Activate User
     Open Admin List
     Open List of Users Page
     Activate User
-    Assert That user has been succesfully updated
+    Assert That user has been successfully updated
 
 
 Deactivate User
@@ -33,6 +33,6 @@ Deactivate User
     Open Admin List
     Open List of Users Page
     Deactivate User
-    Assert That user has been succesfully updated
+    Assert That user has been successfully updated
 
     [Teardown]          close all browsers

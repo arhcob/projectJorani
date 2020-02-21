@@ -1,10 +1,20 @@
 *** Settings ***
 Library                                        Selenium2Library
+#Library                                        BuiltIn
+Library                                        Screenshot
 Resource                                       demo/repository/RepoPart.robot
 
 *** Keywords ***
 Open Jorani Application
     open browser                                ${URL}                      ${BROWSER}
+    MAXIMIZE BROWSER WINDOW
+Set Login
+    clear element text                          ${LoginInput}
+    input text                                  ${LoginInput}               user_test
+Set Password
+    clear element text                          ${PwdInput}
+    input text                                  ${PwdInput}                 Hello00
+    set selenium speed                          ${DELAY}
 Click on Login Button
     click button                                ${LoginBtn}
     capture page screenshot
@@ -33,6 +43,14 @@ Delete User
 Confirm Delete User
     element should contain                      ${PopupDelete}              ${AlertDelete}
     click element                               ${ConfirmDeleteBtn}
-Assert that user has been succesfully deleted
+    take screenshot
+Assert that user has been successfully deleted
     capture page screenshot
     element should contain                      ${Flashbox}                 ${AlertDeleted}
+    should be empty
+    length should be
+    get length
+
+
+Test Comparaison
+#    should_be_true                               ${x} < ${y}

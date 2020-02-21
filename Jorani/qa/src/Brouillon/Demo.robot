@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation               Testing Mercury Website
 Library                     Selenium2Library
-Library                     BuiltIn
+#Library                     BuiltIn
 
 Test Teardown               Close All Browsers
 
@@ -34,5 +34,6 @@ TestCase1: Navigating Mercury webpage
         sleep               ${timeout}
         Click on Sign-On Link
         sleep               ${timeout}
+
     [Teardown]              close browser
 
